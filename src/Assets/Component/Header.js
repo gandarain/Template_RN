@@ -24,7 +24,7 @@ class Header extends Component {
           end={{ x: 1, y: 0 }}
           colors={[color.themaColor, color.subThemaColor]}
           style={{ height: 50, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ color: color.whiteColor, fontSize: 20 }}>Home</Text>
+          <Text style={{ color: color.whiteColor, fontSize: 20 }}>{this.props.title}</Text>
         </LinearGradient>
       </View>
     )

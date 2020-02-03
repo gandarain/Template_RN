@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import {
   Text,
-  View
+  View,
+  TouchableOpacity
 } from 'react-native'
 import {
   Container,
@@ -18,7 +19,22 @@ class HomeScreen extends Component {
     return (
       <Container>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-          <Text style={{ color: color.fontColor }}>Home</Text>
+          <View style={{ paddingBottom: 10 }}>
+            <Text style={{ color: color.fontColor }}>Home</Text>
+          </View>
+          <View style={{ flexDirection: 'row', width: '20%', justifyContent: 'space-between', paddingVertical: 10 }}>
+            <TouchableOpacity>
+              <Text>Hello</Text>
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <Text>Hello</Text>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity
+            onPress={() => this.props.navigation.navigate('Profile')}
+            style={{ backgroundColor: color.themaColor, paddingVertical: 10, paddingHorizontal: 30, borderRadius: 5 }}>
+            <Text style={{ color: color.whiteColor }}>Profile</Text>
+          </TouchableOpacity>
         </View>
       </Container>
     )

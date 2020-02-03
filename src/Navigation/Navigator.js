@@ -10,6 +10,7 @@ import Header from '../Assets/Component/Header'
 // ***** Import Screen ***** //
 import SplashScreen from '../Screen/Splash/SplashScreen'
 import HomeScreen from '../Screen/Home/Home'
+import ProfileScreen from '../Screen/Profile/Profile'
 // ***** /Import Screen ***** //
 
 const AppStack = createStackNavigator({
@@ -17,7 +18,14 @@ const AppStack = createStackNavigator({
     screen: HomeScreen,
     navigationOptions: {
       // eslint-disable-next-line react/display-name
-      header: () => <Header />,
+      header: () => <Header title={'Home'} />,
+    }
+  },
+  Profile: {
+    screen: ProfileScreen,
+    navigationOptions: {
+      // eslint-disable-next-line react/display-name
+      header: () => <Header title={'Profile'} />,
     }
   },
 })
