@@ -6,6 +6,7 @@ import {
 } from 'react-native'
 import {
   Container,
+  Icon
 } from 'native-base'
 import { color } from '../../Assets/Style/ColorList'
 
@@ -23,11 +24,11 @@ class HomeScreen extends Component {
             <Text style={{ color: color.fontColor }}>Home</Text>
           </View>
           <View style={{ flexDirection: 'row', width: '20%', justifyContent: 'space-between', paddingVertical: 10 }}>
-            <TouchableOpacity>
-              <Text>Hello</Text>
+            <TouchableOpacity style={{ backgroundColor: 'blue', borderRadius: 20, padding: 5 }}>
+              <Icon type='MaterialCommunityIcons' name='plus' style={{ color: color.whiteColor }} />
             </TouchableOpacity>
-            <TouchableOpacity>
-              <Text>Hello</Text>
+            <TouchableOpacity style={{ backgroundColor: 'red', borderRadius: 20, padding: 5 }}>
+              <Icon type='MaterialCommunityIcons' name='minus' style={{ color: color.whiteColor }} />
             </TouchableOpacity>
           </View>
           <TouchableOpacity

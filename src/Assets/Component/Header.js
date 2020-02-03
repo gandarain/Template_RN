@@ -9,7 +9,6 @@ import { color } from '../../Assets/Style/ColorList'
 import StatusBar from '../../Assets/Component/StatusBar'
 
 class Header extends Component {
-  static navigationOptions = () => ({ header: null })
   constructor(props) {
     super(props)
     this.state = {}
