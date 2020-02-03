@@ -21,7 +21,7 @@ class StatusBarComponent extends Component {
         start={{ x: 0, y: 0 }}
         end={{ x: 1, y: 0 }}
         colors={[color.themaColor, color.subThemaColor]}
-        style={{paddingBottom: responsiveHeight(4.5)}}>
+        style={{ paddingBottom: responsiveHeight(4.5) }}>
         <StatusBar translucent={true} backgroundColor={'transparent'} />
       </LinearGradient>
     )

@@ -12,7 +12,7 @@ import StatusBar from '../../Assets/Component/StatusBar'
 import { color } from '../../Assets/Style/ColorList'
 
 class SplashScreen extends Component {
-  static navigationOptions = () => ({ header: null })
+  static navigationOptions = () => ({ headerShown: false })
   constructor(props) {
     super(props)
     this.state = {}
