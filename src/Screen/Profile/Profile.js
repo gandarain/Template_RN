@@ -10,7 +10,10 @@ import {
 } from 'native-base'
 import { color } from '../../Assets/Style/ColorList'
 
-class HomeScreen extends Component {
+import { incrementValue, decrementValue } from '../../Redux/Actions'
+import { connect } from 'react-redux'
+
+class ProfileScreen extends Component {
   constructor(props) {
     super(props)
     this.state = {}
@@ -21,13 +24,17 @@ class HomeScreen extends Component {
       <Container>
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
           <View style={{ paddingBottom: 10 }}>
-            <Text style={{ color: color.fontColor }}>Profile</Text>
+            <Text style={{ color: color.fontColor }}>{this.props.value}</Text>
           </View>
           <View style={{ flexDirection: 'row', width: '20%', justifyContent: 'space-between', paddingVertical: 10 }}>
-            <TouchableOpacity style={{ backgroundColor: 'blue', borderRadius: 20, padding: 5 }}>
+            <TouchableOpacity
+              onPress={() => this.props.incrementValue()}
+              style={{ backgroundColor: 'blue', borderRadius: 20, padding: 5 }}>
               <Icon type='MaterialCommunityIcons' name='plus' style={{ color: color.whiteColor }} />
             </TouchableOpacity>
-            <TouchableOpacity style={{ backgroundColor: 'red', borderRadius: 20, padding: 5 }}>
+            <TouchableOpacity
+              onPress={() => this.props.decrementValue()}
+              style={{ backgroundColor: 'red', borderRadius: 20, padding: 5 }}>
               <Icon type='MaterialCommunityIcons' name='minus' style={{ color: color.whiteColor }} />
             </TouchableOpacity>
           </View>
@@ -42,4 +49,12 @@ class HomeScreen extends Component {
   }
 }
 
-export default HomeScreen
+const mapStateToProps = (state) => {
+  return {
+    value: state.value.value
+  }
+}
+
+export default connect(
+  mapStateToProps, { incrementValue, decrementValue }
+)(ProfileScreen)
