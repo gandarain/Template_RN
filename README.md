@@ -9,3 +9,4 @@ Library installed:
 3. React Redux
 4. React Native Linier Gradient
 5. React Native Responsive Dimension
+6. React Native Vector Icons
