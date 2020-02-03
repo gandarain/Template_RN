@@ -12,7 +12,7 @@ import Header from '../../Assets/Component/Header'
 import { color } from '../../Assets/Style/ColorList'
 
 class HomeScreen extends Component {
-  static navigationOptions = () => ({ header: null })
+  static navigationOptions = () => ({ headerShown: false })
   constructor(props) {
     super(props)
     this.state = {}
@@ -23,8 +23,8 @@ class HomeScreen extends Component {
       <Container>
         <StatusBar />
         <Header />
-        <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-          <Text style={{color: color.fontColor}}>Home</Text>
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text style={{ color: color.fontColor }}>Home</Text>
         </View>
       </Container>
     )
