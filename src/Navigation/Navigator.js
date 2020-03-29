@@ -18,14 +18,14 @@ const AppStack = createStackNavigator({
     screen: HomeScreen,
     navigationOptions: {
       // eslint-disable-next-line react/display-name
-      header: () => <Header title={'Home'} />,
+      header: () => <Header title={'Product'} />,
     }
   },
   Profile: {
     screen: ProfileScreen,
     navigationOptions: {
       // eslint-disable-next-line react/display-name
-      header: () => <Header title={'Profile'} />,
+      header: () => <Header title={'Keranjang'} />,
     }
   },
 })
